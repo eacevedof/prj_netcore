@@ -248,7 +248,7 @@ namespace project.Controllers
 
 }//namespace
 ```
-### [10 - ]()
+### [10 - Razor Syntax](https://platzi.com/clases/1395-aspnet-core/14488-razor-syntax/)
 - 
 ```c#
 ```
