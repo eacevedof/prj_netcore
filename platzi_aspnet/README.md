@@ -148,7 +148,7 @@ This command might prompt you for your password to install the certificate on th
 ### [7 - Nuestro proyecto](https://platzi.com/clases/1395-aspnet-core/14485-nuestro-proyecto0649/)
 - Resumen
 - Haremos la app de gestión de una escuela
-### [8 - ]()
+### [8 - Vista y controlador](https://platzi.com/clases/1395-aspnet-core/14486-vista-y-controlador/)
 - 
 ### [9 - ]()
 - 
