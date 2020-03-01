@@ -14,11 +14,11 @@
 
 ### [4 - Habilitar certificados, planillas preinstaladas](https://platzi.com/clases/1395-aspnet-core/14482-habilitar-certificados-planillas-preinstaladas/)
 - Las webapps se pueden servir por http y/o https, en nuestro caso se hará con https y por lo tanto hay que instalar el certificado
-```s
+```
 dotnet tool install --global dotnet-dev-certs
 ```
 ![](https://trello-attachments.s3.amazonaws.com/5e5bec6f6b7bcd3f9715e204/806x278/05cd06e7e2ed7d0d948fbbd4deb0dd54/image.png)
-```s
+```
 El directorio de herramientas "<home-usuario>/.dotnet/tools" no está en la variable de entorno PATH.
 Si usa zsh, puede agregarlo a su perfil mediante la ejecución del comando siguiente:
 
@@ -34,6 +34,18 @@ export PATH="$PATH:<home-usuario>/.dotnet/tools"
 
 Puede invocar la herramienta con el comando siguiente: dotnet-dev-certs
 La herramienta "dotnet-dev-certs" (versión '2.2.0') se instaló correctamente.
+```
+- `dotnet dev-certs https --trust`
+```
+A valid HTTPS certificate with a key accessible across security partitions was not found. The following command will run to fix it:
+'sudo security set-key-partition-list -D localhost -S unsigned:,teamid:UBF8T346G9'
+This command will make the certificate key accessible across security partitions and might prompt you for your password. For more information see: https://aka.ms/aspnetcore/2.1/troubleshootcertissues
+A valid HTTPS certificate with a key accessible across security partitions was not found. The following command will run to fix it:
+'sudo security set-key-partition-list -D localhost -S unsigned:,teamid:UBF8T346G9'
+This command will make the certificate key accessible across security partitions and might prompt you for your password. For more information see: https://aka.ms/aspnetcore/3.1/troubleshootcertissues
+Trusting the HTTPS development certificate was requested. If the certificate is not already trusted we will run the following command:
+'sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain <<certificate>>'
+This command might prompt you for your password to install the certificate on the system keychain.
 ```
 ### [5 - ]()
 -
