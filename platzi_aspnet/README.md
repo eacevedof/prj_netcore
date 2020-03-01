@@ -141,9 +141,12 @@ This command might prompt you for your password to install the certificate on th
 - `<dentro-de-la-carpeta-del-proyecto>dotnet run`
 - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e5bec6f6b7bcd3f9715e204/ccd070a2b5c1ea64214db5696323f67a/image.png)
 ### [6 - ¿Qúé es el patrón MVC?](https://platzi.com/clases/1395-aspnet-core/14484-que-es-el-patron-mvc/)
-- 
-### [7 - ]()
-- 
+- teoria de mvc
+- Modelo: Entidades: POCO es una clase plana sin funcionalidad adicional
+- POCO: Plain old CLR objects
+- POJO plain old java objects
+### [7 - Nuestro proyecto](https://platzi.com/clases/1395-aspnet-core/14485-nuestro-proyecto0649/)
+- Resumen
 ### [8 - ]()
 - 
 ### [9 - ]()
