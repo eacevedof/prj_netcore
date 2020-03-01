@@ -140,7 +140,7 @@ This command might prompt you for your password to install the certificate on th
   - Tenía el puerto mal configurado. 6000 no lo detecta como seguro con 3300 va!
 - `<dentro-de-la-carpeta-del-proyecto>dotnet run`
 - ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e5bec6f6b7bcd3f9715e204/ccd070a2b5c1ea64214db5696323f67a/image.png)
-### [6 - ]()
+### [6 - ¿Qúé es el patrón MVC?](https://platzi.com/clases/1395-aspnet-core/14484-que-es-el-patron-mvc/)
 - 
 ### [7 - ]()
 - 
