@@ -17,7 +17,7 @@
 ```
 dotnet tool install --global dotnet-dev-certs
 ```
-![](https://trello-attachments.s3.amazonaws.com/5e5bec6f6b7bcd3f9715e204/806x278/05cd06e7e2ed7d0d948fbbd4deb0dd54/image.png)
+- ![](https://trello-attachments.s3.amazonaws.com/5e5bec6f6b7bcd3f9715e204/806x278/05cd06e7e2ed7d0d948fbbd4deb0dd54/image.png)
 ```
 El directorio de herramientas "<home-usuario>/.dotnet/tools" no está en la variable de entorno PATH.
 Si usa zsh, puede agregarlo a su perfil mediante la ejecución del comando siguiente:
@@ -55,7 +55,73 @@ This command might prompt you for your password to install the certificate on th
   dotnet new web -o <carpeta-destino-donde-se-creara-la-app>
   dotnet new mvc -o <carpeta-destino-donde-se-creara-la-app>
   ``` 
+- ![](https://trello-attachments.s3.amazonaws.com/5e5bec6f6b7bcd3f9715e204/987x145/65ca9998fd994d9d39d0d3b7c7e6722e/image.png)
+```
+├── Controllers
+│   └── HomeController.cs
+├── Models
+│   └── ErrorViewModel.cs
+├── Program.cs
+├── Properties
+│   └── launchSettings.json
+├── Startup.cs
+├── Views
+│   ├── Home
+│   │   ├── Index.cshtml
+│   │   └── Privacy.cshtml
+│   ├── Shared
+│   │   ├── Error.cshtml
+│   │   ├── _Layout.cshtml
+│   │   └── _ValidationScriptsPartial.cshtml
+│   ├── _ViewImports.cshtml
+│   └── _ViewStart.cshtml
+├── appsettings.Development.json
+├── appsettings.json
+├── obj
+│   ├── project.assets.json
+│   ├── project.csproj.nuget.cache
+│   ├── project.csproj.nuget.dgspec.json
+│   ├── project.csproj.nuget.g.props
+│   └── project.csproj.nuget.g.targets
+├── project.csproj
+└── wwwroot
+    ├── css
+    │   └── site.css
+    ├── favicon.ico
+    ├── js
+    │   └── site.js
+    └── lib
+        ├── bootstrap
+        │   ├── LICENSE
+        │   └── dist
+        │       ├── css
+        │       │   ├── bootstrap-grid.css
+                    ...
+        │       │   └── bootstrap.min.css.map
+        │       └── js
+        │           ├── bootstrap.bundle.js
+                    ...
+        │           └── bootstrap.min.js.map
+        ├── jquery
+        │   ├── LICENSE.txt
+        │   └── dist
+        │       ├── jquery.js
+        │       ├── jquery.min.js
+        │       └── jquery.min.map
+        ├── jquery-validation
+        │   ├── LICENSE.md
+        │   └── dist
+        │       ├── additional-methods.js
+        │       ├── additional-methods.min.js
+        │       ├── jquery.validate.js
+        │       └── jquery.validate.min.js
+        └── jquery-validation-unobtrusive
+            ├── LICENSE.txt
+            ├── jquery.validate.unobtrusive.js
+            └── jquery.validate.unobtrusive.min.js
 
+20 directories, 56 files
+```
 ### [5 - ]()
 -
 ### [6 - ]()
