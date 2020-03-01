@@ -11,5 +11,5 @@
 - Nginx, Tomcat, Apache
 - Para netcore el middleware ideal es **Kestrel**, este es capaz de utilizar de .net por debajo
 - Es solo para desarrollo, no esta pensado para producción
+### [4 - Habilitar certificados, planillas preinstaladas](https://platzi.com/clases/1395-aspnet-core/14482-habilitar-certificados-planillas-preinstaladas/)
 
-###[4 - Habilitar certificados, planillas preinstaladas](https://platzi.com/clases/1395-aspnet-core/14482-habilitar-certificados-planillas-preinstaladas/)
