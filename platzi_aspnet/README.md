@@ -161,6 +161,7 @@ namespace project.Controllers
         public IActionResult Index()
         {
             //si no se especifica la vista se lanza la de por defecto
+            //Views/Escuela/Index.cshtml
             return View();
         }
 
@@ -177,24 +178,108 @@ namespace project.Controllers
 <p><b>Año fundacion:</b></p>
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5e5bec6f6b7bcd3f9715e204/798x570/f3561d27228a12bff0fb5963f22d9d4e/image.png)
-### [9 - ]()
+### [9 - Modelo a nivel básico](https://platzi.com/clases/1395-aspnet-core/14487-modelo-a-nivel-basico/)
 - 
+```c#
+<!-- <project>/Views/_ViewImports.cshtml -->
+@using project
+@using project.Models
+//el taghelper son funcionalidades extra que traen para crear código más rápido
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!-- <project>/Views/_ViewStart.cshtml -->
+@{
+    //el layout que se cargará por defecto
+    //Views/Shared/_Layout.cshtml
+    Layout = "_Layout";
+}
+
+//Views/Shared/_Layout.cshtml
+<div class="container">
+  <main role="main" class="pb-3">
+      @RenderBody() //espacio de la vista
+  </main>
+</div>
+
+<footer class="border-top footer text-muted">
+  <div class="container">
+      &copy; 2020 - project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+  </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@RenderSection("Scripts", required: false)
+
+//Models/Escuela.cs
+using System;
+
+namespace project.Models
+{
+    public class EscuelaModel
+    {
+        public string EscuelaId { get; set; }
+        public string Nombre { get; set; }
+        public int Anyo { get; set; }
+
+    }
+}
+
+//<project>/Controllers/EscuelaController.cs
+using System;
+using Microsoft.AspNetCore.Mvc;
+using project.Models;
+
+namespace project.Controllers
+{
+    public class EscuelaController:Controller
+    {
+        public IActionResult Index()
+        {
+            var objescuela = new EscuelaModel();
+            objescuela.Anyo=2005;
+            objescuela.EscuelaId = Guid.NewGuid().ToString();
+            objescuela.Nombre = "Some school";
+            //si no se especifica la vista se lanza la de por defecto
+            return View(objescuela);
+        }
+
+    }//class
+
+}//namespace
+```
 ### [10 - ]()
 - 
+```c#
+```
 ### [11 - ]()
 - 
+```c#
+```
 ### [12 - ]()
 - 
+```c#
+```
 ### [13 - ]()
 - 
+```c#
+```
 ### [14 - ]()
 - 
+```c#
+```
 ### [15 - ]()
 - 
+```c#
+```
 ### [16 - ]()
 - 
+```c#
+```
 ### [17 - ]()
 - 
+```c#
+```
 ### [18 - ]()
 - 
 ### [19- ]()
