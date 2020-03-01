@@ -134,6 +134,7 @@ This command might prompt you for your password to install the certificate on th
 - Startup.cs tiene las rutas
 - **error**
   - No arranca.
+  - He instalado la extensión de c#
   - > The .NET Core SDK cannot be located. .NET Core debugging will not be enabled. Make sure the .NET Core SDK is installed and is on the path.
   - En `code > preferences > settings` he buscado .Net y desactivado los avisos
   - Tenía el puerto mal configurado. 6000 no lo detecta como seguro con 3300 va!
