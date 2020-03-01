@@ -47,6 +47,15 @@ Trusting the HTTPS development certificate was requested. If the certificate is 
 'sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain <<certificate>>'
 This command might prompt you for your password to install the certificate on the system keychain.
 ```
+- Razor page: Es la web más básica que se puede hacer
+- MVC *: App expansible
+- ASP.NET Core Web API: para hacer APIS (no se verá en el curso)
+- **comando**
+  ```
+  dotnet new web -o <carpeta-destino-donde-se-creara-la-app>
+  dotnet new mvc -o <carpeta-destino-donde-se-creara-la-app>
+  ``` 
+
 ### [5 - ]()
 -
 ### [6 - ]()
