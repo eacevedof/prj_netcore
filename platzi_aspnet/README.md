@@ -137,8 +137,10 @@ This command might prompt you for your password to install the certificate on th
 - **error**
   - No arranca.
   - > The .NET Core SDK cannot be located. .NET Core debugging will not be enabled. Make sure the .NET Core SDK is installed and is on the path.
-  - En `cdoe > preferences > settings` he buscado .Net y desactivado los avisos
+  - En `code > preferences > settings` he buscado .Net y desactivado los avisos
   - Tenía el puerto mal configurado. 6000 no lo detecta como seguro con 3300 va!
+- `<dentro-de-la-carpeta-del-proyecto>dotnet run`
+- ![](https://trello-attachments.s3.amazonaws.com/5b014dcaf4507eacfc1b4540/5e5bec6f6b7bcd3f9715e204/ccd070a2b5c1ea64214db5696323f67a/image.png)
 ### [6 - ]()
 -
 ### [7 - ]()
