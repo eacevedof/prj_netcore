@@ -18,11 +18,11 @@
 dotnet tool install --global dotnet-dev-certs
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5e5bec6f6b7bcd3f9715e204/806x278/05cd06e7e2ed7d0d948fbbd4deb0dd54/image.png)
-```
+```s
 El directorio de herramientas "<home-usuario>/.dotnet/tools" no está en la variable de entorno PATH.
 Si usa zsh, puede agregarlo a su perfil mediante la ejecución del comando siguiente:
 
-cat << \EOF >> ~/.zprofile
+
 # Agregue las herramientas del SDK de .NET Core
 exporte PATH="$PATH:<home-usuario>/.dotnet/tools"
 EOF
@@ -35,7 +35,6 @@ export PATH="$PATH:<home-usuario>/.dotnet/tools"
 Puede invocar la herramienta con el comando siguiente: dotnet-dev-certs
 La herramienta "dotnet-dev-certs" (versión '2.2.0') se instaló correctamente.
 ```
-<hr/>
 - `dotnet dev-certs https --trust`
 ```
 A valid HTTPS certificate with a key accessible across security partitions was not found. The following command will run to fix it:
