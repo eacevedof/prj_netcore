@@ -5,8 +5,10 @@
 - Instalar:
   - VSCode
   - dotnet sdk
-### [3 - ]()
--
+### [3 - La importancia del middleware en el entorno web](https://platzi.com/clases/1395-aspnet-core/14481-la-importancia-del-middleware-en-el-entorno-web/)
+- Nginx, Tomcat, Apache
+- Para netcore el middleware ideal es **Kestrel**, este es capaz de utilizar de .net por debajo
+
 ### [4 - ]()
 -
 ### [5 - ]()
