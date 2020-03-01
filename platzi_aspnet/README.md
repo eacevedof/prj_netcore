@@ -7,4 +7,4 @@
 - Instalar:
   - VSCode
   - dotnet sdk
-### [3 - La importancia del middleware en el entorno web]()
+### [3 - La importancia del middleware en el entorno web](https://platzi.com/clases/1395-aspnet-core/14481-la-importancia-del-middleware-en-el-entorno-web/)
