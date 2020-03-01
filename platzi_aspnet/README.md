@@ -35,6 +35,7 @@ export PATH="$PATH:<home-usuario>/.dotnet/tools"
 Puede invocar la herramienta con el comando siguiente: dotnet-dev-certs
 La herramienta "dotnet-dev-certs" (versión '2.2.0') se instaló correctamente.
 ```
+<hr/>
 - `dotnet dev-certs https --trust`
 ```
 A valid HTTPS certificate with a key accessible across security partitions was not found. The following command will run to fix it:
