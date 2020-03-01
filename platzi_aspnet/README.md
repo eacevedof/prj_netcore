@@ -4,4 +4,7 @@
 - Introducción
 
 ### [2 - Herramientas y prerrequisitos](https://platzi.com/clases/1395-aspnet-core/14480-herramientas-y-prerrequisitos/)
+- Instalar:
+  - VSCode
+  - dotnet sdk
 ### [2 - Herramientas y prerrequisitos](https://platzi.com/clases/1395-aspnet-core/14480-herramientas-y-prerrequisitos/)
