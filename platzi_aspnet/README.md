@@ -130,7 +130,15 @@ This command might prompt you for your password to install the certificate on th
   - images
   - js
   - lib
-  
+- Las vistas son acciones
+- Convención: `<algo>Controller`
+- Program.cs tiene la función main
+- Startup.cs tiene las rutas
+- **error**
+  - No arranca.
+  - > The .NET Core SDK cannot be located. .NET Core debugging will not be enabled. Make sure the .NET Core SDK is installed and is on the path.
+  - En `cdoe > preferences > settings` he buscado .Net y desactivado los avisos
+  - Tenía el puerto mal configurado. 6000 no lo detecta como seguro con 3300 va!
 ### [6 - ]()
 -
 ### [7 - ]()
