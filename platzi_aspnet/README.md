@@ -2,7 +2,7 @@
 
 ### [1 - Bienvenida](https://platzi.com/clases/1395-aspnet-core/14479-bienvenida-al-curso8835/)
 
-### [2 - Herramientas y prerrequisitos](https://platzi.com/clases/1395-aspnet-core/14480-herramientas-y-prerrequisitos/)
+### [2 - Herramientas y prerrequisitos](https://platzi.com/clases/1395-aspnet-core/14480-herramientas-y-prerrequisitos/)
 - Instalar:
   - VSCode
   - dotnet sdk
@@ -11,6 +11,7 @@
 - Nginx, Tomcat, Apache
 - Para netcore el middleware ideal es **Kestrel**, este es capaz de utilizar de .net por debajo
 - Es solo para desarrollo, no esta pensado para producción
+
 ### [4 - Habilitar certificados, planillas preinstaladas](https://platzi.com/clases/1395-aspnet-core/14482-habilitar-certificados-planillas-preinstaladas/)
 - Las webapps se pueden servir por http y/o https, en nuestro caso se hará con https y por lo tanto hay que instalar el certificado
 ```s
