@@ -149,7 +149,34 @@ This command might prompt you for your password to install the certificate on th
 - Resumen
 - Haremos la app de gestión de una escuela
 ### [8 - Vista y controlador](https://platzi.com/clases/1395-aspnet-core/14486-vista-y-controlador/)
-- 
+- Las convenciones 
+```c#
+//<project>/Controllers/EscuelaController.cs
+using Microsoft.AspNetCore.Mvc;
+
+namespace project.Controllers
+{
+    public class EscuelaController:Controller
+    {
+        public IActionResult Index()
+        {
+            //si no se especifica la vista se lanza la de por defecto
+            return View();
+        }
+
+    }//class
+
+}//namespace
+
+@{
+    //<project>/Views/Escuela/Index.cshtml
+    ViewData["Title"] = "Información escuela";
+}
+<h1>Escuela</h1>
+<h2>Nombre:</h2>
+<p><b>Año fundacion:</b></p>
+```
+- ![](https://trello-attachments.s3.amazonaws.com/5e5bec6f6b7bcd3f9715e204/798x570/f3561d27228a12bff0fb5963f22d9d4e/image.png)
 ### [9 - ]()
 - 
 ### [10 - ]()
