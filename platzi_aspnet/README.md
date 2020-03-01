@@ -122,7 +122,7 @@ This command might prompt you for your password to install the certificate on th
 
 20 directories, 56 files
 ```
-### [5 - ]()
+### [5 - Revisión detalladas de la estructura de directorios](https://platzi.com/clases/1395-aspnet-core/14483-revision-detalladas-de-la-estructura-de-directorio/)
 -
 ### [6 - ]()
 -
