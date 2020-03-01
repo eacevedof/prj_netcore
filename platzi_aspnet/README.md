@@ -147,6 +147,7 @@ This command might prompt you for your password to install the certificate on th
 - POJO plain old java objects
 ### [7 - Nuestro proyecto](https://platzi.com/clases/1395-aspnet-core/14485-nuestro-proyecto0649/)
 - Resumen
+- Haremos la app de gestión de una escuela
 ### [8 - ]()
 - 
 ### [9 - ]()
