@@ -1,3 +1,4 @@
+//Startup.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,8 +51,9 @@ namespace project
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Escuela}/{action=Index}/{id?}");
             });
-        }
-    }
-}
+        }//configure
+
+    }//class startup
+}//ns project

@@ -1,4 +1,4 @@
-//Models/Escuela.cs
+//Models/EscuelaModel.cs
 using System;
 
 namespace project.Models
