@@ -1,0 +1,10 @@
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/bin/Debug/netcoreapp3.1/consoleapp.deps.json
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/bin/Debug/netcoreapp3.1/consoleapp.runtimeconfig.json
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/bin/Debug/netcoreapp3.1/consoleapp.runtimeconfig.dev.json
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/bin/Debug/netcoreapp3.1/consoleapp.dll
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/bin/Debug/netcoreapp3.1/consoleapp.pdb
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/obj/Debug/netcoreapp3.1/consoleapp.csprojAssemblyReference.cache
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/obj/Debug/netcoreapp3.1/consoleapp.AssemblyInfoInputs.cache
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/obj/Debug/netcoreapp3.1/consoleapp.AssemblyInfo.cs
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/obj/Debug/netcoreapp3.1/consoleapp.dll
+/Users/ioedu/projects/prj_netcore/udemy_core3_angular/consoleapp/obj/Debug/netcoreapp3.1/consoleapp.pdb
