@@ -453,6 +453,7 @@ public class AsignaturaController:Controller
 ```
 ### [14 - Vistas parciales](https://platzi.com/clases/1395-aspnet-core/14492-vistas-parciales/)
 - Bucle de asignaturas, tipo Lista
+- <partial>, @foreach
 ```c#
 //<project>/Controllers/EscuelaController.cs
 using System;
