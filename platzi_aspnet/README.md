@@ -378,7 +378,7 @@ public class EscuelaController:Controller
     }
 }
 ```
-### [12 - ]()
+### [12 - Importación de modelos](https://platzi.com/clases/1395-aspnet-core/14490-importacion-de-modelos/)
 - 
 ```c#
 ```
