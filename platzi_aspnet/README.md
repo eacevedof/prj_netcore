@@ -174,7 +174,7 @@ namespace project.Controllers
     ViewData["Title"] = "Información escuela";
 }
 <h1>Escuela</h1>
-<h2>Nombre:</h2>
+<h2>nombre:</h2>
 <p><b>Año fundacion:</b></p>
 ```
 - ![](https://trello-attachments.s3.amazonaws.com/5e5bec6f6b7bcd3f9715e204/798x570/f3561d27228a12bff0fb5963f22d9d4e/image.png)
@@ -218,9 +218,9 @@ namespace project.Models
 {
     public class EscuelaModel
     {
-        public string EscuelaId { get; set; }
-        public string Nombre { get; set; }
-        public int Anyo { get; set; }
+        public string id { get; set; }
+        public string nombre { get; set; }
+        public int anyo { get; set; }
 
     }
 }
@@ -237,9 +237,9 @@ namespace project.Controllers
         public IActionResult Index()
         {
             var objescuela = new EscuelaModel();
-            objescuela.Anyo=2005;
-            objescuela.EscuelaId = Guid.NewGuid().ToString();
-            objescuela.Nombre = "Some school";
+            objescuela.anyo=2005;
+            objescuela.id = Guid.NewGuid().ToString();
+            objescuela.nombre = "Some school";
             //si no se especifica la vista se lanza la de por defecto
             return View(objescuela);
         }
@@ -251,7 +251,6 @@ namespace project.Controllers
 ### [10 - Razor Syntax](https://platzi.com/clases/1395-aspnet-core/14488-razor-syntax/)
 - Razor (cuchilla) la forma espaguetti de c#
 - la marca @ es como el ? de php
-
 ```c#
 @{
     //Views/Escuela/Index.cshtml
@@ -260,8 +259,8 @@ namespace project.Controllers
 @{
     ViewData["Title"] = "Información escuela";
 }
-<h1>Escuela: @Model.Nombre</h1>
-<h2>Nombre:</h2>
+<h1>Escuela: @Model.nombre</h1>
+<h2>nombre:</h2>
 <p><b>Año fundacion:</b></p>
 
 //Actualizo ruta por defecto a escuela
@@ -326,9 +325,58 @@ namespace project
 }//ns project
 
 ```
-### [11 - ]()
-- 
+### [11 - Vistas, plantillas, Archivos de inicio](https://platzi.com/clases/1395-aspnet-core/14489-vistas-plantillas-archivos-de-inicio/)
 ```c#
+//Views/Escuela/Index.cshtml
+@model EscuelaModel //tipando el modelo
+@{
+    ViewData["Title"] = "Información escuela";
+    //Layout = "Simple"; //shared/simple.cshtml
+}
+<h1>Escuela: @ViewData["Title"]</h1>
+<h2>Nombre: @Model.nombre</h2>
+<p><b>Año fundacion:</b> <span>@Model.anyo</span></p>
+
+<p>1:<i>@ViewBag.cosadinamica</i></p>
+<p>2:<i>@ViewData["cosadinamica"]</i></p>
+
+//<project>/Views/_ViewStart.cshtml
+@{
+    //aqui defino el template general para todas las vistas
+    Layout = "_Layout";
+    //Layout = "Simple";
+}
+
+//Simple.cshtml
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - project</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>
+
+//EscuelaController.cs
+public class EscuelaController:Controller
+{
+    public IActionResult Index()
+    {
+        var objescuela = new EscuelaModel();
+        objescuela.anyo=2005;
+        objescuela.id = Guid.NewGuid().ToString();
+        objescuela.nombre = "Some school";
+
+        ViewBag.cosadinamica = "La monja";
+        //si no se especifica la vista se lanza la de por defecto
+        return View(objescuela);
+    }
+}
 ```
 ### [12 - ]()
 - 

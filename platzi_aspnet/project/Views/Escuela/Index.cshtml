@@ -4,8 +4,11 @@
 @model EscuelaModel //tipando el modelo
 @{
     ViewData["Title"] = "Información escuela";
+    Layout = "Simple"; //shared/simple.cshtml
 }
-<h1>Escuela: @Model.Nombre</h1>
-<h2>Nombre:</h2>
-<p><b>Año fundacion:</b></p>
+<h1>Escuela: @ViewData["Title"]</h1>
+<h2>Nombre: @Model.nombre</h2>
+<p><b>Año fundacion:</b> <span>@Model.anyo</span></p>
 
+<p>1:<i>@ViewBag.cosadinamica</i></p>
+<p>2:<i>@ViewData["cosadinamica"]</i></p>

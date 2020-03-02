@@ -10,9 +10,11 @@ namespace project.Controllers
         public IActionResult Index()
         {
             var objescuela = new EscuelaModel();
-            objescuela.Anyo=2005;
-            objescuela.EscuelaId = Guid.NewGuid().ToString();
-            objescuela.Nombre = "Some school";
+            objescuela.anyo=2005;
+            objescuela.id = Guid.NewGuid().ToString();
+            objescuela.nombre = "Some school";
+
+            ViewBag.cosadinamica = "La monja";
             //si no se especifica la vista se lanza la de por defecto
             return View(objescuela);
         }
