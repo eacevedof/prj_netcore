@@ -451,7 +451,7 @@ public class AsignaturaController:Controller
 </ul>
 
 ```
-### [14 - ]()
+### [14 - Vistas parciales](https://platzi.com/clases/1395-aspnet-core/14492-vistas-parciales/)
 - 
 ```c#
 ```
