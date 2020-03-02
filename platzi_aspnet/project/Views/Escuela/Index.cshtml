@@ -6,6 +6,13 @@
 <h1>Escuela: @ViewData["Title"]</h1>
 <h2>Nombre: @Model.Nombre</h2>
 <p><b>Año fundacion:</b> <span>@Model.AñoDeCreación</span></p>
+<p>Tipo escuela: <span>@Model.TipoEscuela</span></p>
+
+<address>
+    <p>Dirección: @Model.Dirección</p>
+    <p>País: @Model.Pais</p>
+    <p>Ciudad: @Model.Ciudad</p>
+</address>
 
 <p>1:<i>@ViewBag.cosadinamica</i></p>
 <p>2:<i>@ViewData["cosadinamica"]</i></p>

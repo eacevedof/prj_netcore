@@ -1,0 +1,12 @@
+﻿@*Asignatura/Index.cshtml*@
+@model Asignatura //tipando el modelo
+@{
+    ViewData["Title"] = "Información asignatura";
+    Layout = "Simple"; //shared/simple.cshtml
+}
+<ul>
+    <li>Asignatura Id: @Model.UniqueId</li>
+    <li>Nombre: @Model.Nombre</li>
+    <li>Fecha: @ViewBag.fecha</li>
+</ul>
+

@@ -383,6 +383,7 @@ public class EscuelaController:Controller
 - **comando**: `dotnet build`
 - Se incluyen los modelos del repositorio, se hace un refactor de lo necesario
 - Se ejecuta el proyecto y funciona
+- Como se pasan valores al constructor madre: **new Modelo{ clave=valor, ...}**
 ```c#
 //EscuelaController
 public IActionResult Index()
@@ -398,9 +399,57 @@ public IActionResult Index()
     return View(objescuela);
 }
 ```
-### [13 - ]()
-- 
+### [13 - Vistas para listar asignaturas](https://platzi.com/clases/1395-aspnet-core/14491-vistas-para-listar-asignaturas/)
+- comentario en razor: `@*Asignatura/Index.cshtml*@`
+- ViewBag es lo mismo que ViewData
 ```c#
+public class EscuelaController:Controller
+{
+    public IActionResult Index()
+    {
+        //var objescuela = new EscuelaModel();
+        var objescuela = new Escuela();
+        objescuela.AñoDeCreación=2005;
+        objescuela.UniqueId = Guid.NewGuid().ToString();
+        objescuela.Nombre = "Some school";
+        objescuela.Dirección = "Una dirección xxx";
+        objescuela.Ciudad = "Madrid";
+        objescuela.Pais = "España";
+        objescuela.TipoEscuela = TiposEscuela.Secundaria;
+
+        ViewBag.cosadinamica = "La monja";
+        //si no se especifica la vista se lanza la de por defecto
+        return View(objescuela);
+    }//Index()
+
+}//class EscuelaController
+public class AsignaturaController:Controller
+{
+  public IActionResult Index()
+  {
+    var asignatura = new Asignatura{
+        UniqueId = Guid.NewGuid().ToString(),
+        Nombre = "Programación"
+    };
+    
+    ViewBag.fecha = DateTime.Now;
+
+    return View(asignatura);
+  }//Index()
+}//class AsignaturaController
+
+//Asignatura/Index.cshtml
+@model Asignatura //tipando el modelo
+@{
+    ViewData["Title"] = "Información asignatura";
+    Layout = "Simple"; //shared/simple.cshtml
+}
+<ul>
+    <li>Asignatura Id: @Model.UniqueId</li>
+    <li>Nombre: @Model.Nombre</li>
+    <li>Fecha: @ViewBag.fecha</li>
+</ul>
+
 ```
 ### [14 - ]()
 - 
