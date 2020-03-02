@@ -379,8 +379,24 @@ public class EscuelaController:Controller
 }
 ```
 ### [12 - Importación de modelos](https://platzi.com/clases/1395-aspnet-core/14490-importacion-de-modelos/)
-- 
+- Repo de modelos: [platzi-curso-cshar Etapa 9](https://github.com/JuanKRuiz/platzi-curso-csharp/tree/Etapa9/Entidades)
+- **comando**: `dotnet build`
+- Se incluyen los modelos del repositorio, se hace un refactor de lo necesario
+- Se ejecuta el proyecto y funciona
 ```c#
+//EscuelaController
+public IActionResult Index()
+{
+    //var objescuela = new EscuelaModel();
+    var objescuela = new Escuela();
+    objescuela.AñoDeCreación=2005;
+    objescuela.UniqueId = Guid.NewGuid().ToString();
+    objescuela.Nombre = "Some school";
+
+    ViewBag.cosadinamica = "La monja";
+    //si no se especifica la vista se lanza la de por defecto
+    return View(objescuela);
+}
 ```
 ### [13 - ]()
 - 

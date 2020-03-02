@@ -1,14 +1,11 @@
-﻿@{
-    //Views/Escuela/Index.cshtml
-}
-@model EscuelaModel //tipando el modelo
+﻿@model Escuela //tipando el modelo
 @{
     ViewData["Title"] = "Información escuela";
     Layout = "Simple"; //shared/simple.cshtml
 }
 <h1>Escuela: @ViewData["Title"]</h1>
-<h2>Nombre: @Model.nombre</h2>
-<p><b>Año fundacion:</b> <span>@Model.anyo</span></p>
+<h2>Nombre: @Model.Nombre</h2>
+<p><b>Año fundacion:</b> <span>@Model.AñoDeCreación</span></p>
 
 <p>1:<i>@ViewBag.cosadinamica</i></p>
 <p>2:<i>@ViewData["cosadinamica"]</i></p>
