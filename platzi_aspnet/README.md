@@ -452,8 +452,78 @@ public class AsignaturaController:Controller
 
 ```
 ### [14 - Vistas parciales](https://platzi.com/clases/1395-aspnet-core/14492-vistas-parciales/)
-- 
+- Bucle de asignaturas, tipo Lista
 ```c#
+//<project>/Controllers/EscuelaController.cs
+using System;
+using System.Collections.Generic; //lista
+using Microsoft.AspNetCore.Mvc;
+using project.Models;
+
+namespace project.Controllers
+{
+    public class AsignaturaController:Controller
+    {
+        public IActionResult Index(){
+            return View(new Asignatura{UniqueId = Guid.NewGuid().ToString(),Nombre = "Programación"});
+        }
+
+        public IActionResult MultiAsignatura()
+        {
+            var asignaturas = this._get_asignaturas();
+            ViewBag.fecha = DateTime.Now;
+
+            return View("MultiAsignatura",asignaturas);
+        }//Index()
+    
+        private List<Asignatura> _get_asignaturas()
+        {
+            var asignaturas = new List<Asignatura>(){
+                        new Asignatura{Nombre="Matemáticas",UniqueId=Guid.NewGuid().ToString()} ,
+                        new Asignatura{Nombre="Educación Física",UniqueId=Guid.NewGuid().ToString()},
+                        new Asignatura{Nombre="Castellano",UniqueId=Guid.NewGuid().ToString()},
+                        new Asignatura{Nombre="Ciencias Naturales",UniqueId=Guid.NewGuid().ToString()},
+                        new Asignatura{UniqueId = Guid.NewGuid().ToString(),Nombre = "Programación"}
+                    };
+            return asignaturas;
+        }
+
+    }//class AsignaturaController
+
+}//namespace project.Controllers
+
+//Shared/AsignaturaSimple.cshtml
+@model Asignatura
+<ul>
+    <li>Asignatura Id: @Model.UniqueId</li>
+    <li>Nombre: @Model.Nombre</li>
+    <li>Fecha: @ViewBag.fecha</li>
+</ul>
+
+//Asignatura/Index.cshtml
+@model Asignatura //tipando el modelo
+@{
+    ViewData["Title"] = "Información asignatura";
+    Layout = "Simple"; //shared/simple.cshtml
+}
+
+<ul>
+    <li>Asignatura Id: @Model.UniqueId</li>
+    <li>Nombre: @Model.Nombre</li>
+    <li>Fecha: @ViewBag.fecha</li>
+</ul>
+
+<span>Desde la vista parcial: (tag helper)</span>
+<partial name="AsignaturaSimple" model="@Model"/>
+
+//Asignatura/MultiAsignatura
+@model List<Asignatura>
+
+@foreach(var asignatura in Model)
+{
+    //include de la simple
+    <partial name="AsignaturaSimple" model="asignatura"/>
+}
 ```
 ### [15 - ]()
 - 

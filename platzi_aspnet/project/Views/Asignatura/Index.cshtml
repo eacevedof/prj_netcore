@@ -4,9 +4,12 @@
     ViewData["Title"] = "Información asignatura";
     Layout = "Simple"; //shared/simple.cshtml
 }
+
 <ul>
     <li>Asignatura Id: @Model.UniqueId</li>
     <li>Nombre: @Model.Nombre</li>
     <li>Fecha: @ViewBag.fecha</li>
 </ul>
 
+<span>Desde la vista parcial: (tag helper)</span>
+<partial name="AsignaturaSimple" model="@Model"/>

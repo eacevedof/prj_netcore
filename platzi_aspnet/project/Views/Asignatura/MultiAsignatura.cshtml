@@ -1,0 +1,6 @@
+@model List<Asignatura>
+
+@foreach(var asignatura in Model)
+{
+    <partial name="AsignaturaSimple" model="asignatura"/>
+}
