@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Models;
-
+using Theframework.Components;
 
 namespace dotnetapi.Controllers
 {
@@ -13,41 +13,26 @@ namespace dotnetapi.Controllers
     [Route("/")]
     public class HomeController : ControllerBase
     {
-        private static readonly string[] endpoints = new[]
+        private static List<string> endpoints = new List<string>
         {
-            "/api/v1/products","/api/v1/clients/","/api/v1/orders/","/api/v1/users"
+            "/api/v1/products","/api/v1/clients","/api/v1/orders","/api/v1/users"
         };
 
         private readonly ILogger<HomeController> _logger;
+        private readonly Utils utils;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            utils = new Utils();
         }
 
         [HttpGet]
-        public ActionResult<List<Product>> Get(
-            [FromQuery] bool discontinuedOnly = false)
+        public string[] Get()
         {
-            List<Product> products = new List<Product>();
-            Product oProduct = new Product();
-            
-            oProduct.id = 55;
-            oProduct.is_active = true;
-
-
-            products.Add(oProduct);
-
-            // if (discontinuedOnly)
-            // {
-            //     products = _productsInMemoryStore.Where(p => p.IsDiscontinued).ToList();
-            // }
-            // else
-            // {
-            //     products = _productsInMemoryStore;
-            // }
-
-            return products;
+            string thisdomain = utils.get_domain();
+            endpoints.Add(thisdomain);
+            return endpoints.ToArray();
         }
 
     }// HomeController
