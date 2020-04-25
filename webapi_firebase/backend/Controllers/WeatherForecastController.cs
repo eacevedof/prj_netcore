@@ -9,7 +9,8 @@ namespace dotnetapi.Controllers
 {
     [ApiController]
     //[Route("[controller]")]
-    [Route("/")]
+    [Route("/api/v1/wheather")]
+
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

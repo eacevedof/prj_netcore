@@ -8,17 +8,17 @@ using Microsoft.Extensions.Logging;
 namespace dotnetapi.Controllers
 {
     [ApiController]
-    [Route("api/products")]
-    public class Products : ControllerBase
+    [Route("api/v1/products")]
+    public class ProductsController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<Products> _logger;
+        private readonly ILogger<ProductsController> _logger;
 
-        public Products(ILogger<Products> logger)
+        public ProductsController(ILogger<ProductsController> logger)
         {
             _logger = logger;
         }
@@ -35,5 +35,6 @@ namespace dotnetapi.Controllers
             })
             .ToArray();
         }
-    }
-}
+    }// ProductsController
+
+}//dotnetapi.Controllers
