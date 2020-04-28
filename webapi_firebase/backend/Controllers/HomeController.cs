@@ -33,16 +33,12 @@ namespace dotnetapi.Controllers
         public string[] Get()
         {
             string thisdomain = utils.get_domain();
+            Log.console(thisdomain);
             endpoints.Add(thisdomain);
             return endpoints.ToArray();
         }
 
 
-        private string get_json(object obj)
-        {
-            string json = JsonConvert.SerializeObject(obj);
-            return json;
-        }
 
     }// HomeController
 
