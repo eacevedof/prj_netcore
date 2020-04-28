@@ -21,19 +21,18 @@ namespace dotnetapi.Controllers
         };
 
         private readonly ILogger<HomeController> _logger;
-        private readonly Utils utils;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            utils = new Utils();
         }
 
         [HttpGet]
         public string[] Get()
         {
-            string thisdomain = utils.get_domain();
-            Log.console(thisdomain);
+            string thisdomain = Utils.get_domain();
+            Log.console(thisdomain, "xxxxx");
+            Log.file(thisdomain,"this domain");
             endpoints.Add(thisdomain);
             return endpoints.ToArray();
         }

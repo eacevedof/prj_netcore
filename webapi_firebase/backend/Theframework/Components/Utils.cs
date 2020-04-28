@@ -2,14 +2,10 @@ namespace Theframework
 {
     namespace Components
     {
-        public sealed class Utils
+        public static class Utils
         {
-            public Utils()
-            {
 
-            }
-
-            public string get_domain()
+            public static string get_domain()
             {
                 return System.Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties().DomainName;
             }
