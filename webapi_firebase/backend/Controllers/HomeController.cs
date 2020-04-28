@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Models;
 using Theframework.Components;
 using Newtonsoft.Json;
-
+using RestSharp;
 
 namespace dotnetapi.Controllers
 {
@@ -30,13 +30,18 @@ namespace dotnetapi.Controllers
         [HttpGet]
         public string[] Get()
         {
+            Log.console("homecontroller.get()");
+            test();
             string thisdomain = Utils.get_domain();
-            Log.console(thisdomain, "title console :)");
-            Log.file(thisdomain,"title for file");
-            //Product o = new Product();
-            //Log.file(o,"o product");
-            endpoints.Add(thisdomain);
             return endpoints.ToArray();
+        }
+
+        private void test()
+        {
+            Log.console("homecontroller.test()");
+            Curl ocurl = new Curl();
+            string response = ocurl.get_response();
+            Log.file(response,"response");
         }
 
     }// HomeController
