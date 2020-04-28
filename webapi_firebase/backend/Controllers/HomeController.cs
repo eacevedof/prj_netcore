@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Models;
 using Theframework.Components;
+using Newtonsoft.Json;
+
 
 namespace dotnetapi.Controllers
 {
@@ -35,6 +37,14 @@ namespace dotnetapi.Controllers
             return endpoints.ToArray();
         }
 
+
+        private string get_json(object obj)
+        {
+            string json = JsonConvert.SerializeObject(obj);
+            return json;
+        }
+
     }// HomeController
+
     
 }//dotnetapi.Controllers
