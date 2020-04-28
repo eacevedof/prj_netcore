@@ -31,15 +31,12 @@ namespace dotnetapi.Controllers
         public string[] Get()
         {
             string thisdomain = Utils.get_domain();
-            Log.console(thisdomain, "xxxxx");
-            Log.file(thisdomain,"this domain");
+            Log.console(thisdomain, "title console :)");
+            Log.file(thisdomain," title for file");
             endpoints.Add(thisdomain);
             return endpoints.ToArray();
         }
 
-
-
     }// HomeController
-
     
 }//dotnetapi.Controllers

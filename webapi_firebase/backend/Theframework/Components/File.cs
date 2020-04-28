@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using Strm = System.IO.StreamReader;
+
 
 namespace Theframework
 {
@@ -11,7 +11,7 @@ namespace Theframework
 
             public static string get_content(string pathfile)
             {
-                Strm objstrm = new Strm(pathfile);
+                StreamReader objstrm = new StreamReader(pathfile);
                 string strcontent = objstrm.ReadToEnd();
                 objstrm.Close();
                 return strcontent;
@@ -19,13 +19,35 @@ namespace Theframework
 
             public static void write(string content, string pathfile)
             {
-                var pathfile1 = @pathfile;
-                if(!File.Exists(pathfile1))
+                var pathfix = @pathfile;
+                if(!File.Exists(pathfix))
                 {
-                    var objfile = File.Create(pathfile1);
+                    var objfile = File.Create(pathfix);
                     objfile.Close();
+                    write_new(content,pathfile);
                 }
-                File.WriteAllText(pathfile1, content);
+                else
+                {
+                    write_append(content,pathfile);
+                }
+            }
+
+            private static void write_new(string content, string pathfile)
+            {
+                var pathfix = @pathfile;
+                using (StreamWriter sw = File.CreateText(pathfix)) 
+                {
+                    sw.WriteLine(content);
+                }                
+            }
+
+            private static void write_append(string content, string pathfile)
+            {
+                var pathfix = @pathfile;
+                using (StreamWriter sw = File.AppendText(pathfix)) 
+                {
+                    sw.WriteLine(content);
+                }                
             }
 
         }//class Files
