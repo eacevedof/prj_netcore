@@ -32,7 +32,9 @@ namespace dotnetapi.Controllers
         {
             string thisdomain = Utils.get_domain();
             Log.console(thisdomain, "title console :)");
-            Log.file(thisdomain," title for file");
+            Log.file(thisdomain,"title for file");
+            //Product o = new Product();
+            //Log.file(o,"o product");
             endpoints.Add(thisdomain);
             return endpoints.ToArray();
         }
